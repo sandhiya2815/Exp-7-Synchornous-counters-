@@ -101,26 +101,5 @@ DOWN COUNTER:
 ![image](https://github.com/sandhiya2815/Exp-7-Synchornous-counters-/assets/155123230/fcd9f0a9-d0fc-4235-9b6b-d8ed1934f0ea)
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-
 ### RESULTS 
+By this we have verified the truth table of 3-bit up-counter using verilog.
