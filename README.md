@@ -1,7 +1,9 @@
 # Exp-6-Synchornous-counters - up counter and down counter 
 ### AIM: To implement 4 bit up and down counters and validate  functionality.
-### HARDWARE REQUIRED:  – PC, Cyclone II , USB flasher
-### SOFTWARE REQUIRED:   Quartus prime
+### HARDWARE REQUIRED:  
+– PC, Cyclone II , USB flasher
+### SOFTWARE REQUIRED:  
+Quartus prime
 ### THEORY 
 
 ## UP COUNTER 
@@ -34,6 +36,32 @@ The Q outputs of each flip-flop will serve as the respective binary bits of the 
 Four-bit “Up” Counter
 ![image](https://user-images.githubusercontent.com/36288975/169644758-b2f4339d-9532-40c5-af40-8f4f8c942e2c.png)
 
+UP COUNTER:
+PROGRAM:
+```
+module uc(clk, A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+A[2]=(((A[0])&(A[1]))^A[2]);
+A[1]=(A[0])^A[1];
+A[0]=A[0]^1;
+end
+endmodule
+```
+
+RTL REALIZATION:
+UP COUNTER:
+![image](https://github.com/sandhiya2815/Exp-7-Synchornous-counters-/assets/155123230/6792151c-0525-4ba2-b33f-ab8975fbcc48)
+TIMINNG DIAGRAM FOR UP COUNTER:
+UP COUNTER:
+![image](https://github.com/sandhiya2815/Exp-7-Synchornous-counters-/assets/155123230/80a60a21-cf9a-4658-b4f8-794e432c6c39)
+TRUTH TABLE:
+UP COUNTER:
+![image](https://github.com/sandhiya2815/Exp-7-Synchornous-counters-/assets/155123230/89bd8413-aac2-4ef9-a79a-76a5d338ccb1)
+
+
 
 
 ## DOWN COUNTER 
@@ -48,37 +76,47 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ### Procedure
 /* write all the steps invloved */
 
-
-
-### PROGRAM 
-/*
-Program for flipflops  and verify its truth table in quartus using Verilog programming.
-Developed by: 
-RegisterNumber:  
-*/
-
-
-
-
-
-
-### RTL LOGIC UP COUNTER AND DOWN COUNTER  
-
-
-
-
-
-
-
-
-
-### TIMING DIGRAMS FOR COUNTER  
-
+DOWN COUNTER:
+PROGRAM:
+```
+module dc(clk,A);
+input clk;
+output reg [2:0]A;
+always @(posedge clk)
+begin
+A[2]=(((~A[0])&(~A[1]))^A[2]);
+A[1]=(~A[0])^A[1];
+A[0]=1^A[0];
+end
+endmodule
+```
+RTL REALIZATION:
+DOWN COUNTER:
+![image](https://github.com/sandhiya2815/Exp-7-Synchornous-counters-/assets/155123230/80545755-8279-4a50-a6a0-3e7d0b5943c3)
+TIMING DIAGRAM FOR DOWN COUNTER:
+DOWN COUNTER:
+![image](https://github.com/sandhiya2815/Exp-7-Synchornous-counters-/assets/155123230/977bc03b-cc98-4f3d-be8b-8fce869d442c)
+TRUTH TABLE:
+DOWN COUNTER:
+![image](https://github.com/sandhiya2815/Exp-7-Synchornous-counters-/assets/155123230/fcd9f0a9-d0fc-4235-9b6b-d8ed1934f0ea)
 
 
 
 
-### TRUTH TABLE 
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 
 
 
 
