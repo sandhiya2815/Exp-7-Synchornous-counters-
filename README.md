@@ -48,9 +48,10 @@ This type of counter is normally referred to as a Down Counter, (CTD). In a bina
 ![image](https://user-images.githubusercontent.com/36288975/169644844-1a14e123-7228-4ed8-81a9-eb937dff4ac8.png)
 
 4-bit Count Down Counter
-
+```
 REGISTER NUMBER:23013627
 DEVELOPED BY:SARIDHA M A
+```
 PROGRAM:
 UP COUNTER:
 ```
